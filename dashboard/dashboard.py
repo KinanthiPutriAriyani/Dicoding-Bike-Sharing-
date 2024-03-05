@@ -6,7 +6,7 @@ import altair as alt
 import numpy as np
 
 # Load data
-all_df = pd.read_csv("all_df.csv")
+all_df = pd.read_csv("dashboard/all_df.csv")
 all_df['dateday'] = pd.to_datetime(all_df['dateday'])
 
 st.set_page_config(page_title="Bike-sharing Dashboard",
@@ -78,7 +78,7 @@ max_date = all_df["dateday"].max()
 # ----- SIDEBAR -----
 with st.sidebar:
     # add logo
-    st.image("sepeda.png")
+    st.image("assets/sepeda.png")
 
     st.markdown("<h1 style='text-align: center;'>Date Filter</h1>", unsafe_allow_html=True)
 
